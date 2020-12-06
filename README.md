@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/cap47/grumphp-typoscript-lint.svg?branch=master)](https://travis-ci.com/cap47/grumphp-typoscript-lint)
 # Grumphp Typoscript Lint
 
 A TypoScript lint task for [GrumPHP](https://github.com/phpro/grumphp).
