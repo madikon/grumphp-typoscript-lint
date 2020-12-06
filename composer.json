@@ -10,12 +10,6 @@
     },
     "version": "0.1.0",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Madlen Konejl",
-            "email": "madlen.konejl@tsystems.com"
-        }
-    ],
     "autoload": {
         "psr-4": {
             "TSystems\\GrumphpTypoScriptLint\\": "/src"
