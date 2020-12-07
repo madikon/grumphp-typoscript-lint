@@ -4,21 +4,19 @@ declare(strict_types=1);
 
 namespace TSystems\GrumphpTypoScriptLint\Task;
 
+use GrumPHP\Runner\TaskResult;
+use GrumPHP\Runner\TaskResultInterface;
 use GrumPHP\Task\AbstractExternalTask;
 use GrumPHP\Task\Context\ContextInterface;
 use GrumPHP\Task\Context\GitPreCommitContext;
 use GrumPHP\Task\Context\RunContext;
-use GrumPHP\Runner\TaskResult;
-use GrumPHP\Runner\TaskResultInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
  * Class TypoScriptLint
- * @package TSystems\GrumphpTypoScriptLint\Task
  */
 class TypoScriptLint extends AbstractExternalTask
 {
-
     /**
      * @return string
      */
@@ -60,7 +58,7 @@ class TypoScriptLint extends AbstractExternalTask
      */
     public function canRunInContext(ContextInterface $context): bool
     {
-        return ($context instanceof GitPreCommitContext || $context instanceof RunContext);
+        return $context instanceof GitPreCommitContext || $context instanceof RunContext;
     }
 
     /**

@@ -5,13 +5,12 @@ declare(strict_types=1);
 namespace TSystems\GrumphpTypoScriptLint\Extension;
 
 use GrumPHP\Extension\ExtensionInterface;
-use TSystems\GrumphpTypoScriptLint\Task\TypoScriptLint;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;
+use TSystems\GrumphpTypoScriptLint\Task\TypoScriptLint;
 
 /**
  * Class Loader
- * @package TSystems\GrumphpTypoScriptLint\Extension
  */
 class Loader implements ExtensionInterface
 {
