@@ -39,7 +39,8 @@ class TypoScriptLint extends AbstractExternalTask
                 'output' => '-',
                 'ansi' => true,
                 'fail-on-warnings' => true,
-                'paths' => []
+                'paths' => [],
+                'exclude' => []
             ]
         );
         $resolver->addAllowedTypes('triggered_by', ['array']);
@@ -49,6 +50,7 @@ class TypoScriptLint extends AbstractExternalTask
         $resolver->addAllowedTypes('fail-on-warnings', ['null', 'bool']);
         $resolver->addAllowedTypes('ansi', ['null', 'bool']);
         $resolver->addAllowedTypes('paths', ['null', 'array']);
+        $resolver->addAllowedTypes('exclude', ['null', 'array']);
         return $resolver;
     }
 
@@ -68,7 +70,11 @@ class TypoScriptLint extends AbstractExternalTask
     public function run(ContextInterface $context): TaskResultInterface
     {
         $config = $this->getConfig()->getOptions();
-        $files = $context->getFiles()->extensions($config['triggered_by']);
+
+        $files = $context->getFiles()
+            ->paths($config['paths'] ?? [])
+            ->notPaths($config['exclude'] ?? [])
+            ->extensions($config['triggered_by']);
 
         if (0 === count($files)) {
             return TaskResult::createSkipped($this, $context);
@@ -80,7 +86,7 @@ class TypoScriptLint extends AbstractExternalTask
         $arguments->addOptionalArgument('--output=%s', $config['output']);
         $arguments->addOptionalArgument('--fail-on-warnings', $config['fail-on-warnings']);
         $arguments->addOptionalArgument('--ansi', $config['ansi']);
-        $arguments->addOptionalCommaSeparatedArgument('%s', $config['paths']);
+        $arguments->addFiles($files);
 
         $process = $this->processBuilder->buildProcess($arguments);
         $process->run();
