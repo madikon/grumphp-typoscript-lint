@@ -3,7 +3,8 @@
     "description": "A typoscript linter for grumphp",
     "type": "library",
     "require": {
-        "phpro/grumphp": "^1.2"
+        "phpro/grumphp": "^1.2",
+        "helmich/typo3-typoscript-lint": "^2.3"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.16"

@@ -30,7 +30,9 @@ grumphp:
     typoscriptlint:
       config: "path/to/your/typoscriptlint-config.yaml"
       paths:
-        - "packages/extkey_*"
+        - "path/to/include"
+      exclude:
+        - "path/or/file/to/exclude"
       triggered_by:
         - typoscript
         - tsconfig
@@ -42,7 +44,7 @@ grumphp:
 Results in the folowing command line call
 
 ```bash
-vendor/bin/typoscript-lint --config=path/to/your/typoscriptlint-config.yaml --format=compact --output=- --fail-on-warnings packages/extkey_*
+vendor/bin/typoscript-lint --config=path/to/your/typoscriptlint-config.yaml --format=compact --output=- --fail-on-warnings file1.typoscript file2.typoscript
 ```
 ## Linter Configuration
 
