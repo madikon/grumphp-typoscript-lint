@@ -1,18 +1,23 @@
 {
     "name": "tsystems/grumphp-typoscript-lint",
-    "description": "A typoscript linter for grumphp",
+    "description": "A typoscript linter task for grumphp",
     "type": "library",
     "require": {
-        "phpro/grumphp": "^1.2",
-        "helmich/typo3-typoscript-lint": "^2.3"
+        "helmich/typo3-typoscript-lint": "^2.5",
+        "phpro/grumphp": "^1.13"
     },
-    "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.16"
-    },
-    "license": "MIT",
+    "license": "GPL-3.0-or-later",
     "autoload": {
         "psr-4": {
             "TSystems\\GrumphpTypoScriptLint\\": "/src"
         }
+    },
+    "config": {
+        "allow-plugins": {
+            "phpro/grumphp": true
+        }
+    },
+    "scripts": {
+        "grumphp": "docker run --rm -it -v $(pwd):/grumphp madlenka/grumphp-docker grumphp run"
     }
 }
