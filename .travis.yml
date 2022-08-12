@@ -3,11 +3,14 @@ php:
   - 7.4
   - 8.0
   - 8.1
+
 services:
   - docker
 
 before_script:
+  - docker version
   - composer install --no-scripts
 
 script:
-  - composer run grumphp
+  - ls -l
+  - docker pull madlenka/grumphp-docker
