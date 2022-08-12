@@ -12,5 +12,4 @@ before_script:
   - composer install --no-scripts
 
 script:
-  - ls -l
-  - docker pull madlenka/grumphp-docker
+  - docker run --rm -it -v $(pwd):/grumphp madlenka/grumphp-docker grumphp run
