@@ -26,7 +26,5 @@ jobs:
           composer-options: --no-scripts --no-plugins
 
       - name: Run all tests
-        uses: php-actions/composer@v6
-        with:
-          command: run ci:test
+        run: composer run ci:test
 
