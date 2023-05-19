@@ -1,7 +1,4 @@
 grumphp:
-  extensions:
-    - TSystems\GrumphpTypoScriptLint\Extension\Loader
-
   tasks:
     phpcsfixer:
       config: .php-cs-fixer.php
