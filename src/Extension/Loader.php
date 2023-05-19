@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace TSystems\GrumphpTypoScriptLint\Extension;
+namespace Madikon\GrumphpTypoScriptLint\Extension;
 
 use GrumPHP\Extension\ExtensionInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;
-use TSystems\GrumphpTypoScriptLint\Task\TypoScriptLint;
+use Madikon\GrumphpTypoScriptLint\Task\TypoScriptLint;
 
 /**
  * Class Loader

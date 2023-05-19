@@ -1,16 +1,19 @@
 {
-    "name": "tsystems/grumphp-typoscript-lint",
+    "name": "madikon/grumphp-typoscript-lint",
     "description": "A typoscript linter task for grumphp",
     "type": "library",
     "require": {
-        "php": "^7.4 || ^8.0",
-        "helmich/typo3-typoscript-lint": "^2.5",
-        "phpro/grumphp": "^1.13"
+        "phpro/grumphp": "^1.16",
+        "helmich/typo3-typoscript-lint": "^3.1"
     },
-    "license": "GPL-3.0-or-later",
+    "require-dev": {
+        "phpstan/phpstan": "^1",
+        "friendsofphp/php-cs-fixer": "^3.16"
+    },
+    "license": "MIT",
     "autoload": {
         "psr-4": {
-            "TSystems\\GrumphpTypoScriptLint\\": "src/"
+            "Madikon\\GrumphpTypoScriptLint\\": "src/"
         }
     },
     "config": {
@@ -19,13 +22,8 @@
         }
     },
     "scripts": {
-        "ci:prepare": "composer install -d build",
-		"ci:php-cs-test": "build/vendor/bin/php-cs-fixer fix --dry-run --diff",
-		"ci:php-cs-fix": "build/vendor/bin/php-cs-fixer fix",
         "ci:grumphp": "vendor/bin/grumphp run",
         "ci:test": [
-            "@ci:prepare",
-            "@ci:php-cs-test",
             "@ci:grumphp"
         ]
 	}

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TSystems\GrumphpTypoScriptLint\Task;
+namespace Madikon\GrumphpTypoScriptLint\Task;
 
 use GrumPHP\Runner\TaskResult;
 use GrumPHP\Runner\TaskResultInterface;
