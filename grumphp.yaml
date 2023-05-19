@@ -1,3 +1,14 @@
 grumphp:
   tasks:
-    phpcsfixer: ~
+    phpcsfixer:
+      config: .php-cs-fixer.php
+    phpstan:
+      configuration: phpstan.neon
+      use_grumphp_paths: false
+    typoscriptlint:
+      paths:
+        - test
+
+  extensions:
+    - Madikon\GrumphpTypoScriptLint\Extension\Loader
+
