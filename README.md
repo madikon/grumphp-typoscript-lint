@@ -9,7 +9,7 @@ Based on the TypoScript Linter of Martin Helmich [martin-helmich/typo3-typoscrip
 Install composer package
 
 ```bash
-composer require --dev tsystems/grumphp-typoscript-lint
+composer require --dev madikon/grumphp-typoscript-lint
   ```
 
 Add the extension loader to your `grumphp.yml`
