@@ -1,3 +1,4 @@
+[![Test](https://github.com/madikon/grumphp-typoscript-lint/actions/workflows/Test.yml/badge.svg)](https://github.com/madikon/grumphp-typoscript-lint/actions/workflows/Test.yml)
 # Grumphp Typoscript Lint
 
 A TypoScript lint task for [GrumPHP](https://github.com/phpro/grumphp).
