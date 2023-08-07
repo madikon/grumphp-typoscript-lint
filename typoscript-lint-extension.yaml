@@ -1,0 +1,8 @@
+services:
+  Madikon\GrumphpTypoScriptLint\Task\TypoScriptLint:
+    class: Madikon\GrumphpTypoScriptLint\Task\TypoScriptLint
+    arguments:
+      - '@process_builder'
+      - '@formatter.raw_process'
+    tags:
+      - { name: grumphp.task, task: typoscriptlint }

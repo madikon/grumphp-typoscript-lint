@@ -10,6 +10,7 @@ use GrumPHP\Task\AbstractExternalTask;
 use GrumPHP\Task\Context\ContextInterface;
 use GrumPHP\Task\Context\GitPreCommitContext;
 use GrumPHP\Task\Context\RunContext;
+use GrumPHP\Task\Config\ConfigOptionsResolver;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
@@ -26,9 +27,9 @@ class TypoScriptLint extends AbstractExternalTask
     }
 
     /**
-     * @return OptionsResolver
+     * @return ConfigOptionsResolver
      */
-    public static function getConfigurableOptions(): OptionsResolver
+    public static function getConfigurableOptions(): ConfigOptionsResolver
     {
         $resolver = new OptionsResolver();
         $resolver->setDefaults(
@@ -51,7 +52,8 @@ class TypoScriptLint extends AbstractExternalTask
         $resolver->addAllowedTypes('ansi', ['null', 'bool']);
         $resolver->addAllowedTypes('paths', ['null', 'array']);
         $resolver->addAllowedTypes('exclude', ['null', 'array']);
-        return $resolver;
+
+        return ConfigOptionsResolver::fromOptionsResolver($resolver);
     }
 
     /**

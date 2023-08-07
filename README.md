@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.com/cap47/grumphp-typoscript-lint.svg?branch=master)](https://travis-ci.com/cap47/grumphp-typoscript-lint)
 # Grumphp Typoscript Lint
 
 A TypoScript lint task for [GrumPHP](https://github.com/phpro/grumphp).
@@ -17,7 +16,7 @@ Add the extension loader to your `grumphp.yml`
 ```yaml
 grumphp:
   extensions:
-    - TSystems\GrumphpTypoScriptLint\Extension\Loader
+    - Madikon\GrumphpTypoScriptLint\Extension\Loader
 ```
 
 ## Usage
