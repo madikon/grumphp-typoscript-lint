@@ -3,12 +3,12 @@
     "description": "A typoscript linter task for grumphp",
     "type": "library",
     "require": {
-        "helmich/typo3-typoscript-lint": "^3.1"
+        "helmich/typo3-typoscript-lint": "^3.1",
+		"phpro/grumphp": "^2.5"
     },
     "require-dev": {
         "phpstan/phpstan": "^1",
-        "friendsofphp/php-cs-fixer": "^3.16",
-		"phpro/grumphp": "^2.5"
+        "friendsofphp/php-cs-fixer": "^3.16"
     },
     "license": "MIT",
     "autoload": {
