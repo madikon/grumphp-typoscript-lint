@@ -7,7 +7,8 @@
     },
     "require-dev": {
         "phpstan/phpstan": "^1",
-        "friendsofphp/php-cs-fixer": "^3.16"
+        "friendsofphp/php-cs-fixer": "^3.16",
+		"phpro/grumphp": "^2.5"
     },
     "license": "MIT",
     "autoload": {
