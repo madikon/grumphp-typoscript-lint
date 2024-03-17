@@ -3,7 +3,6 @@
     "description": "A typoscript linter task for grumphp",
     "type": "library",
     "require": {
-        "phpro/grumphp": "^2",
         "helmich/typo3-typoscript-lint": "^3.1"
     },
     "require-dev": {
